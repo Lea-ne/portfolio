@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap');
+
+/*****  Variable  ****/
+:root {
+    --font-principal: 'Sora', sans-serif;
+}  
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Header */
+header {
+    margin-top: 10px;
+    padding: 50px 60px ;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between;
+    height: 60vh; 
+    background-image: url('./image/fond-landing.png'); 
+    background-size: 96% 90%; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    color: white; 
+}
+
+/* Styles pour le contenu du header */
+header > div {
+    display: flex;
+    align-items: center;
+}
+
+header > div > img {
+    width: 18px;
+    height: 18px;
+}
+
+header > div > p {
+    font-weight: 500;
+    font-family: var(--font-principal);
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 8px;
+}
+
+header > nav {
+    border-radius: 100px;
+    border: 1.8px solid white;
+    width: fit-content;
+    display: flex;
+    font-family: var(--font-principal);
+    padding: 11px;
+}
+
+header > nav > p {
+    padding: 0px 5px 0px 5px;
+}
+
+
+
+/*****  Image de fin  ****/
+#landing>h1{
+    font-size: large;
+}
+
+
+
+    
