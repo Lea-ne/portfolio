@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
 
 /*****  Variable  ****/
 :root {
@@ -14,6 +14,11 @@
     box-sizing: border-box;
 }
 
+body{
+    transition: background-color 1s ease;
+    background-color: white;
+}
+
 
 
 /* Header */
@@ -21,7 +26,7 @@ header {
     display: flex;
     align-items: center; 
     justify-content: space-between;
-    padding: 5% 5% 5% 5%;
+    padding: 6%;
 }
 
 /* Styles pour le contenu du header */
@@ -33,6 +38,7 @@ header > div {
 header > div > img {
     width: 18px;
     height: 18px;
+    filter: invert(100%);
 }
 
 header > div > p {
@@ -73,16 +79,18 @@ header > nav > p {
 /*****  Image de fin  ****/
 
 #landing {
-    margin-top: 130px;
     padding: 6%;
+    margin-top: 110px;
+    padding-bottom: 150px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .titre-landing > p {
-    font-family: var(--font-text);
+    font-family: var(--font-principal); /*texte*/
     font-size: 1.3em;
     margin-bottom: 5px;
+    font-weight: 400;
 }
 
 .titre-landing > h1 {
@@ -134,26 +142,107 @@ header > nav > p {
 /**********Projet*******/
 
 #projet {
-    background-color: black;
-    color: white;
+    height: 1300px;
+    font-family: var(--font-principal);
+    padding: 6% 6% 6% 6%;
+    transition: background-color 1s ease;
 }
 
 
-#projet>div:first-child{
-   display: flex;
+#projet > h2 {
+    font-size: 2em;
 }
 
-#projet>div:first-child>img{
-    width: 10px;
+
+
+
+
+/*la grid*/
+#projet > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2% 0% 0% 0%;
+}
+
+#projet > div > div{
+    padding-bottom: 4%;
+}
+
+#projet > div > div > div > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 19px;
+    margin-bottom: 1em;
+}
+
+#projet> div > div > div > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 4px 0px 4px;
+}
+
+
+/*fleche*/
+#projet > div > div > div > div > a {
+    padding: 15px;
+    border-radius: 100px;
+    width: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.1s ease;
+}
+
+#projet > div > div > div > div > a > img {
+    width: 20px;
     height: 20px;
- }
-
-
-#projet>div:last-child{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Créer une grille de 2 colonnes */
-    gap: 20px; /* Espacement entre les éléments */
+    filter: invert(100%);
+    transition: transform 0.2s ease, filter 0.3s ease;
 }
+
+#projet > div > div > div > div > a:hover img {
+    transform: rotate(-45deg);
+    filter: invert(0%);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#projet > div > div > div > div > a:hover {
+    background-color: white;
+    transition: background-color 0.1s ease;
+}
+
+
+
+.description-projet> p {
+    margin-top: 2px;
+    font-family: var(--font-principal);
+    font-weight: 200;
+    font-size: 0.9em;
+}
+
+.description-projet > h3{
+    font-size: 1.2em;
+}
+
+body.black-background{
+    background-color: black;
+}
+
+body.black-background h1,body.black-background h2, body.black-background h3, body.black-background p{
+    color: white; /* Définissez la couleur du texte sur blanc */
+}
+
+body h1,body h2,body p, body h3{
+    color: black; 
+}
+
+
+
+
+
+
 
 
 
