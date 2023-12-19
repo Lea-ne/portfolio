@@ -7,6 +7,8 @@
 
     <link href="./style.css" rel="stylesheet"/>
     <script src="./script.js" defer></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.525/build/spline-viewer.js"></script>
+
 </head>
 <body>
 
@@ -33,7 +35,7 @@
 <section id="landing">
     <div class="titre-landing">
         <p>Hello, My name is Léane, I'm doing</p>
-        <h1>Web design and Front-end developpement <img src="./image/etoile.png" alt="vector"></h1>
+        <h1>Web design and Front-end developpement <img  class="etoile" src="./image/etoile.png" alt="vector"></h1>
     </div>
     
     <div class="scroll">
@@ -63,7 +65,7 @@
                         <img src="./image/test-projet2.png" alt="">
                         <div>
                             <div class="description-projet">
-                                <h3>Identité graphique</h3>
+                                <h3 class="detection-fond">Identité graphique</h3>
                                 <p>logo design, visual identity</p>
                             </div>
                             <a href="link">
@@ -130,9 +132,9 @@
 
 
 <!----- About me : presentation ------>
-    <section>
+    <section id="about">
         <div>
-            <img src="./image/etoile.png" alt="vector">
+            <img  class="etoile" src="./image/etoile.png" alt="vector">
             <p>About me</p>
         </div>
 
@@ -142,20 +144,20 @@
                 <h2>A Brief intro, who i am ?</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
             </div>
-            <img src="" alt="truc 3d">
+            <img src="" alt="">
         </div>
     </section>
 
 
  <!----- About me : expertise ------>
-    <section>
+    <section  id="expertise">
        
         
             <!----- expertise ------>
             <div>
                 <div>
                     <h2>My expertises</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                    <p>I focus on all things design and web related. With each of my services, my goal is to deliver an impactful and elevating digital experience for everyone. </p>
                 </div>
                 <div>
                     <h4>Web design</h4>
@@ -170,7 +172,7 @@
             <div>
                 <div>
                     <h2>Digital tools</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                    <p>These are my go to tech stack to make any projects happen. I am always eager of learning more about my current stack, and new technologies that could expand my horizons.</p>
                 </div>
                 <div>
                     <h4>Javascript</h4>
@@ -185,38 +187,46 @@
 
 
 <!----- Contact me ------>
-    <section>
+    <section id="contact">
         <div>
             <div>
-                <h2>Contact me</h2>
-                <p>I’m currently in search of an internship from march to july 2024, let me now</p>
+                <p>Looking for a passionate web developper? Let's collaborate!</p>
+                <h2>• Actually available for an internship form march to july</h2>
             </div>
 
-            <div>
-                <p>form</p>
-                <button>Send message</button>
-            </div>
+            <form action="#" method="post">
+                <label for="nom">Name</label>
+                <input type="text" id="nom" name="nom">
+            
+                <label for="message" class="message">Message</label>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea>
+            
+                <button type="submit">Send message <img src="./image/arrow.png" alt="Votre image"> </button>
+
+            </form>
         </div>
 
         <div>
-            <div>
-                <p>Location</p>
-                <p>Waterford</p>
-                <p>Heure</p>
+            <div class="email-contact">
+                <h4>Contact</h4>
+                <p>leaneleboulanger@gmail.com</p>
             </div>
-            <div>
-                <p>Digital link</p>
+
+            <div class="location">
+                <h4>Location</h4>
+                <p>Waterford, irlande</p>
+                <p id="heure">Heure</p>
+            </div>
+
+            <div class="link">
+                <h4>Digital link</h4>
                 <span>
-                    <img src="" alt="logo">
+                    <img src="./image/github-sign.png" alt="logo">
                     <p>github</p>
                 </span>
                 <span>
-                    <img src="" alt="logo">
+                    <img src="./image/linkedin.png" alt="logo">
                     <p>Linkedin</p>
-                </span>
-                <span>
-                    <img src="" alt="logo">
-                    <p>Youtube</p>
                 </span>
             </div>
         </div>

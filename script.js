@@ -87,10 +87,49 @@ const resetDecryption = () => {
 };
 
 function transitionBackground() {
-    fullPage.classList.add('black-background');
-}
+    clearTimeout(transitionTimeout);
+    transitionTimeout = setTimeout(() => {
+        fullPage.classList.add('black-background');
+        transitionBackground();
+    }, 700); // Ajoutez le délai nécessaire pour la transition (par exemple, 1 seconde)
+};
 
 const resetTransition = () => {
     clearTimeout(transitionTimeout);
     fullPage.classList.remove('black-background');
 };
+
+
+
+
+
+
+
+
+
+
+
+/////// AFFICHER HEURE ///////////
+function afficherHeure() {
+    const heureElement = document.getElementById('heure');
+
+    function actualiserHeure() {
+        const maintenant = new Date();
+        const fuseauHoraireIrlande = 'Europe/Dublin'; // Fuseau horaire de l'Irlande
+
+        const options = {
+            timeZone: fuseauHoraireIrlande,
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric'
+        };
+
+        const heureIrlande = maintenant.toLocaleTimeString('ie-IE', options);
+        heureElement.textContent = heureIrlande;
+    }
+
+    setInterval(actualiserHeure, 1000);
+    actualiserHeure(); // Pour afficher l'heure immédiatement lors du chargement de la page
+}
+
+afficherHeure();

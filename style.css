@@ -81,7 +81,7 @@ header > nav > p {
 #landing {
     padding: 6%;
     margin-top: 110px;
-    padding-bottom: 150px;
+    padding-bottom: 200px;
     display: flex;
     align-items: center;
 }
@@ -142,9 +142,9 @@ header > nav > p {
 /**********Projet*******/
 
 #projet {
-    height: 1300px;
+    height: fit-content;
     font-family: var(--font-principal);
-    padding: 6% 6% 6% 6%;
+    padding: 4% 6% 0% 6%;
     transition: background-color 1s ease;
 }
 
@@ -226,6 +226,8 @@ header > nav > p {
     font-size: 1.2em;
 }
 
+
+/*changment de couleur du body*/
 body.black-background{
     background-color: black;
 }
@@ -237,6 +239,248 @@ body.black-background h1,body.black-background h2, body.black-background h3, bod
 body h1,body h2,body p, body h3{
     color: black; 
 }
+
+body.black-background .etoile{
+    filter: invert(100%);
+}
+
+
+/* page about */
+
+#about {
+    font-family: var(--font-principal);
+    padding: 10% 6% 6% 6%;
+    height: 800px;
+}
+
+#about > div{
+    display: flex;
+}
+
+#about > div:first-child > img {
+    width: 20px;
+    height: 20px;
+}
+
+#about > div:first-child > p {
+    font-weight: 600;
+}
+
+
+#about > div:last-child {
+    margin-top: 10%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about > div:last-child> div{
+    width: 50%;
+}
+
+#about > div:last-child> div > h2{
+    font-size: 2.1em;
+}
+
+#about > div:last-child> div > p{
+    margin-top: 10%;
+    font-size: 1.3em;
+}
+
+
+
+/*** expertise ***/
+
+#expertise {
+    height: 800px;
+    padding: 3% 6% 6% 6%;
+    font-family: var(--font-principal);
+}
+
+#expertise > div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#expertise > div:last-child {
+    margin-top: 60px;
+}
+
+
+#expertise > div > div > h2{
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+#expertise > div > div > p{
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+
+#expertise > div > div{
+    width: 50%;
+}
+
+
+#expertise > div > div:last-child{
+    text-align: right;
+}
+
+#expertise > div > div:last-child > h4{
+    color: rgb(169, 169, 169);
+    font-size: 3em;
+    font-weight: 800;
+}
+
+
+
+/**** contact section ***/
+#contact {
+    display: flex;
+    justify-content: space-between;
+    height: 800px;
+    padding: 3% 6% 6% 6%;
+    font-family: var(--font-principal);
+}
+
+#contact > div:first-child {
+   width: 50%;
+}
+
+#contact > div:first-child > div > p {
+    font-size: 2.3em;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+#contact > div:first-child > div > h2 {
+    font-size: 1.2em;
+    font-weight: 200;
+    color: rgb(123, 123, 123);
+}
+
+/*formulaire*/
+#contact > div:first-child > form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+
+#contact > div:first-child > form > input, #contact > div:first-child > form > textarea{
+    border: none;
+    border-bottom: 1px solid rgb(169, 169, 169);
+    font-family: var(--font-principal);
+    font-size: 1.1em;
+    padding: 10px 0 10px 0px;
+}
+
+#contact > div:first-child > form > input:focus, #contact > div:first-child > form > textarea:focus{
+    outline: none; /* Pour supprimer également l'effet de focus par défaut */
+    border: none;
+    border-bottom: 1px solid rgb(169, 169, 169);
+    font-family: var(--font-principal);
+    font-size: 1.1em;
+    padding: 10px 0 10px 0px;
+}
+
+#contact > div:first-child > form > label{
+   color: rgb(169, 169, 169);
+   margin-bottom: 2px;
+}
+
+/* name */
+
+
+
+/* text area*/
+#contact > div:first-child > form > .message{
+    margin-top: 10%;
+}
+#contact > div:first-child > form > textarea{
+    height: 70px;
+}
+
+/* button */
+#contact > div:first-child > form > button {
+    margin-top: 30px;
+    width: 30%;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-family: var(--font-principal);
+    padding: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9em;
+}
+
+#contact > div:first-child > form > button > img {
+    width: 20px;
+    height: 20px;
+    filter: invert(100%);
+}
+
+
+/* partie de droite du contact me */
+#contact > div:last-child {
+    width: 30%;
+    margin-top: 20px;
+}
+
+
+#contact > div:last-child > .location, #contact > div:last-child > .email-contact, #contact > div:last-child > .link{
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+
+#contact h4 {
+    color: black;
+    font-weight: 700;
+    font-size: 1.7em;
+    margin-bottom: 10px;
+}
+
+#contact p{
+    font-weight: 200;
+    font-size: 1.4em;
+}
+
+#contact > div:last-child > .link > span {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+#contact > div:last-child > .link > span > img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
