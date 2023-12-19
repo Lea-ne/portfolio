@@ -291,48 +291,42 @@ body.black-background .etoile{
 /*** expertise ***/
 
 #expertise {
-    height: 800px;
+    height: 600px;
     padding: 3% 6% 6% 6%;
     font-family: var(--font-principal);
-}
-
-#expertise > div {
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
 }
 
-#expertise > div:last-child {
-    margin-top: 60px;
+#expertise > .explication{
+    width: 50%;
 }
 
+#expertise > .explication > div:first-child{
+    margin-bottom: 190px;
+}
 
-#expertise > div > div > h2{
+#expertise > .explication > div > h2{
     font-size: 3em;
-    margin-bottom: 20px;
-    font-weight: 800;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
-#expertise > div > div > p{
-    font-weight: 300;
+#expertise > .explication > div > p{
     font-size: 1.2em;
 }
 
 
-#expertise > div > div{
-    width: 50%;
+#expertise > .name-techno > div:first-child{
+    margin-bottom: 50px;
 }
 
-
-#expertise > div > div:last-child{
-    text-align: right;
-}
-
-#expertise > div > div:last-child > h4{
-    color: rgb(169, 169, 169);
-    font-size: 3em;
+#expertise > .name-techno > div > h4{
     font-weight: 800;
+    font-size: 3em;
+    color: rgb(193, 193, 193);
 }
+
 
 
 
@@ -346,7 +340,7 @@ body.black-background .etoile{
 #contact {
     display: flex;
     justify-content: space-between;
-    padding: 6% 6% 6% 6%;
+    padding: 16% 6% 6% 6%;
     font-family: var(--font-principal);
 }
 

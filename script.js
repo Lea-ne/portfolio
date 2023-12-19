@@ -133,3 +133,25 @@ function afficherHeure() {
 }
 
 afficherHeure();
+
+
+
+
+
+/////////SCROLL EXPERTISE//////////////
+
+window.addEventListener('scroll', function() {
+    const expertiseSection = document.getElementById('expertise');
+    const nameTechnoDiv = expertiseSection.querySelector('.name-techno');
+    const sectionBottom = expertiseSection.offsetTop + expertiseSection.offsetHeight;
+    const scrollPosition = window.scrollY + window.innerHeight;
+  
+    if (scrollPosition > sectionBottom) {
+      let offsetY = scrollPosition - sectionBottom;
+      offsetY = Math.min(offsetY, 150); // Limiter le déplacement à 400px maximum
+      nameTechnoDiv.style.transform = `translateY(-${offsetY}px)`;
+    } else {
+      nameTechnoDiv.style.transform = 'none';
+    }
+  });
+
